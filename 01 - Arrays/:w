@@ -21,11 +21,11 @@ def romanToInt(s:str):
                         ls.append(i)
             print(ls)
             myls = [mydict.get(j) for j in ls]
-            print(sum(myls))
+            print(myls)
 
             # mylist = [mydict.get(s) for x in range(len(s.split())) if s.split()[x] in mydict]
             # print(mylist)
             # return(sum(mylist))
 
-s = 'LIV'
+s = 'III'
 romanToInt(s)
