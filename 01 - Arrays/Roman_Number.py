@@ -22,6 +22,8 @@ def romanToInt(s:str):
             print(ls)
             myls = [mydict.get(j) for j in ls]
             print(sum(myls))
+            ls2 = [q if 'IV' in s]
+            print(ls2)
 
             # mylist = [mydict.get(s) for x in range(len(s.split())) if s.split()[x] in mydict]
             # print(mylist)
