@@ -12,9 +12,20 @@ def romanToInt(s:str):
             
 
             # mylist = mydict.get('L')
-            mylist = [mydict.get(s) for x in range(len(s.split())) if s.split()[x] in mydict]
-            print(mylist)
+            ls = []
+            for i in s.split():
+                if i in mydict:
+                    ls.append(i)
+                else:
+                    for i in s:
+                        ls.append(i)
+            print(ls)
+            myls = [mydict.get(j) for j in ls]
+            print(myls)
+
+            # mylist = [mydict.get(s) for x in range(len(s.split())) if s.split()[x] in mydict]
+            # print(mylist)
             # return(sum(mylist))
 
-s = 'IX'
+s = 'IVV'
 romanToInt(s)
