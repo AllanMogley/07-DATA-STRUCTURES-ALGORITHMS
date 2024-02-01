@@ -11,7 +11,9 @@ def brute_force(text, pattern):
 
     # iterate through index in i
     # cheack if there is a match in text/pattern index values
-    # add result to count if thr condition is passed
+    # add result to count if the condition is passed
+    # initially, the i index remains constant and moves 1 step,
+    # ahead by incrementint with the value of j
 
     while i < l1:
         j = 0
@@ -31,5 +33,5 @@ def brute_force(text, pattern):
 
 
 
-brute_force('acbcabccababcaacbcac','acbcac')
+brute_force('ab','a')
 
