@@ -16,13 +16,19 @@ def romanToInt(s:str):
             for i in s:
                 if i in mydict:
                     ls.append(i)
-            print(ls)
+            print('List 1 = ',ls)
+
+
+            ch = ['I', 'X']
+            if ch[0:1] == ls[0:1]:
+                for t in ch:
+                    if t in ls:
+                        ls.pop(0)
+                ls.insert(0,'IX')
+                print('List 2 = ', ls)
             myls = [mydict.get(j) for j in ls]
             print(sum(myls))
 
-            # mylist = [mydict.get(s) for x in range(len(s.split())) if s.split()[x] in mydict]
-            # print(mylist)
-            # return(sum(mylist))
 
-s = 'IXIII'
+s = 'XIII'
 romanToInt(s)
