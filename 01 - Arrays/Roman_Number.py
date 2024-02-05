@@ -1,7 +1,7 @@
 # def romanToInt(s: str) -> int:
 def romanToInt(s:str):
             mydict = {
-                        'I' : 1, 'II' : 2, 'III' : 3,
+                        'I' : 1,
                         'V' : 5, 'X' : 10,
                         'L' : 50, 'C' : 100,
                         'D' : 500, 'M' : 1000,
@@ -13,12 +13,9 @@ def romanToInt(s:str):
 
             # mylist = mydict.get('L')
             ls = []
-            for i in s.split():
+            for i in s:
                 if i in mydict:
                     ls.append(i)
-                else:
-                    for i in s:
-                        ls.append(i)
             print(ls)
             myls = [mydict.get(j) for j in ls]
             print(sum(myls))
@@ -27,5 +24,5 @@ def romanToInt(s:str):
             # print(mylist)
             # return(sum(mylist))
 
-s = 'XIII'
+s = 'IXIII'
 romanToInt(s)
