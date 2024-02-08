@@ -1,6 +1,6 @@
-class Solution(s):
-    def l_Subs(self, s):
+class Solution:
 
+    def l_Subs(self, s):
         n = len(s)
         maxLength = 0
         left = 0
@@ -16,12 +16,10 @@ class Solution(s):
                     charset.remove(s[right])
                     left += 1
                     charset.add(s[right])
-
         return(maxLength)
 
-word = Solution('abcde')
-
-
+word = Solution()
+print(word.l_Subs('abcda'))
 
 
 
