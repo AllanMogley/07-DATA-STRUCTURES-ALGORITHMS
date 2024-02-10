@@ -1,34 +1,23 @@
 # def romanToInt(s: str) -> int:
 def romanToInt(s:str):
             mydict = {
-                        'I' : 1,
-                        'V' : 5, 'X' : 10,
-                        'L' : 50, 'C' : 100,
-                        'D' : 500, 'M' : 1000,
+                     'I' : 1,
+                     'V' : 5, 'X' : 10,
+                     'L' : 50, 'C' : 100,
+                     'D' : 500, 'M' : 1000
+                     }
 
-                        'IV' : 4, 'IX' : 9,
-                        
-                        'CD' : 400, 'CM' : 900}
-            
+            ans = 0
 
-            # mylist = mydict.get('L')
-            ls = []
-            for i in s:
-                if i in mydict:
-                    ls.append(i)
-            print('List 1 = ',ls)
+            for i in range(len(s)):
+                if i < len(s) - 1 and mydict[s[i]] < mydict[s[i + 1]]:
+                    ans -= mydict[s[i]]
+                else:
+                    ans += mydict[s[i]]
 
-
-            ch = ['I', 'X']
-            if ch[0:1] == ls[0:1]:
-                for t in ch:
-                    if t in ls:
-                        ls.pop(0)
-                ls.insert(0,'IX')
-                print('List 2 = ', ls)
-            myls = [mydict.get(j) for j in ls]
-            print(sum(myls))
+            print(ans)
+            return ans
 
 
-s = 'XIII'
+s = 'IXIII'
 romanToInt(s)
