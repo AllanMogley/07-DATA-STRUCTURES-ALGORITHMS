@@ -1,7 +1,10 @@
 from typing import List
 
 class Solution:
-    def longestCommonPrefix(strs: List[str]) -> str
+    def longestCommonPrefix(strs: List[str]) -> str:
+
+        le = max(len(strs[i]) for i in strs
+        print(le)
 
         t = 0
         for j in strs:
