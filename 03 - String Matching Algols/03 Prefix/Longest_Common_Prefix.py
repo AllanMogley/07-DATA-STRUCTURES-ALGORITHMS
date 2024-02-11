@@ -5,26 +5,16 @@ class Solution:
 
         le = min([len(strs[i]) for i in range(len(strs))])
         print(le)
+        
+        ans = ''
+        first = strs[0]
+        last = strs[-1]
 
-        t = 0
-        for j in strs:
-            a = [x for x in strs[0]]
-            b = [q for q in strs[1]]
-            c = [z for z in strs[2]]
-
-        for f in a:
-            for g in b:
-                for h in c:
-                    while f == g == h:
-                        print(f)
-
-     
-
-            # while a == q:
-        print('a', a)
-        print('b', b)
-        print('c', c)
-            # t += 1
+        for i in range (le):
+            if first[i] != last[i]:
+                print('None')
+            ans += first[i]
+            print(ans)
 
 
 myl = ['flow', 'flowe', 'flower']
