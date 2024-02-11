@@ -9,9 +9,10 @@ class Solution:
         t = 0
         for j in strs:
             for x in j:
-                while len(j) <= le and x == (y, l for y in j[t]):
-                    print(x)
-                    t += 1
+                for q in j[t + 1]:
+                    while x == q:
+                        print(x)
+                        t += 1
 
 
 myl = ['flow', 'flowe', 'flower']
