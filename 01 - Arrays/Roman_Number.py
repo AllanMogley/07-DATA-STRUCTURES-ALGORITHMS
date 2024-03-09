@@ -17,6 +17,7 @@ def romanToInt(s:str):
             # Loop through the string and check and compare value in dictionary
             #-------------------------------------------------------------------
             ans = 0
+            print('String Length ---> ', len(s))
             for i in range(len(s)):
                 if i < len(s) - 1 and mydict[s[i]] < mydict[s[i + 1]]:
                     ans -= mydict[s[i]]
