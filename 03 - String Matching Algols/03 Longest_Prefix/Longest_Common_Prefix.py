@@ -3,18 +3,19 @@ from typing import List
 class Solution:
     def longestCommonPrefix(strs: List[str]) -> str:
 
-        le = min([len(strs[i]) for i in range(len(strs))])
+        le = min([len(i) for i in strs])
         print('Min Len ---> ', le)
         
-        ans = set()
+        ans = ''
         first = strs[0]
         last = strs[-1]
 
         for i in range (le):
             if first[i] == last[i]:
-                ans.add(first[i])
+                ans += first[i]
             else:
-                ans.remove(first[i])
+                ans.replace(first[i], '')
+                break
         print(ans)
 
 
