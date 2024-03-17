@@ -1,54 +1,57 @@
-set schema 'flattables';
--- select * from "Data_In" limit 50
-
-create table if not exists org as(
-	select company_name as company,
+create table if not exists orgs as
+(
+	select id, company_name as company,
 	"Date" as date
-	from "Data_In"
-	);
+	from a_datain
+);
+
 	
-create table if not exists Open as(
-	select "Open" as open,
+create table if not exists open as
+(
+	select id, "Open" as open,
 	"Date" as date
-	from "Data_In"
+	from a_datain
 );
 
-create table if not exists High as(
-	select "High" as high,
+
+create table if not exists high as
+(
+	select id, "High" as high,
 	"Date" as date
-	from "Data_In"
+	from a_datain
 );
 
-create table if not exists Low as(
-	select "Low" as low,
+
+create table if not exists low as
+(
+	select id, "Low" as low,
 	"Date" as date
-	from "Data_In"
+	from a_datain
 );
 
-create table if not exists Close as(
-	select "Close" as close,
+
+create table if not exists close as
+(
+	select id, "Close" as close,
 	"Date" as date
-	from "Data_In"
+	from a_datain
 );
 
-create table if not exists Adj_Close as(
-	select "Adj Close" as adj_close,
+
+create table if not exists adj_close as
+(
+	select id, "Adj Close" as adj_close,
 	"Date" as date
-	from "Data_In"
+	from a_datain
 );
 
-create table if not exists Volume as(
-	select "Volume" as volume,
+
+create table if not exists volume as
+(
+	select id, "Volume" as volume,
 	"Date" as date
-	from "Data_In"
+	from a_datain
 )
 
-
-select * from "Data_In" limit 10
-
-select company, volume, volume.date from "volume" left join "org"
-on org.date = volume.date
-order by org.date desc
-limit 50
 
 
