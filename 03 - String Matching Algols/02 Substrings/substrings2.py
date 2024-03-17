@@ -10,4 +10,4 @@ class Test:
 
 strs = Test()
 text = 'pwwkew'
-strs.prefix(text)
+print(strs.prefix(text))
