@@ -8,7 +8,7 @@ create table if not exists orgs as
 	
 create table if not exists open as
 (
-	select id, "Open" as open,
+	select id, open,
 	"Date" as date
 	from a_datain
 );
@@ -16,7 +16,7 @@ create table if not exists open as
 
 create table if not exists high as
 (
-	select id, "High" as high,
+	select id, high,
 	"Date" as date
 	from a_datain
 );
@@ -24,7 +24,7 @@ create table if not exists high as
 
 create table if not exists low as
 (
-	select id, "Low" as low,
+	select id, low,
 	"Date" as date
 	from a_datain
 );
@@ -32,7 +32,7 @@ create table if not exists low as
 
 create table if not exists close as
 (
-	select id, "Close" as close,
+	select id, close,
 	"Date" as date
 	from a_datain
 );
@@ -40,7 +40,7 @@ create table if not exists close as
 
 create table if not exists adj_close as
 (
-	select id, "Adj Close" as adj_close,
+	select id, adjclose,
 	"Date" as date
 	from a_datain
 );
@@ -48,7 +48,7 @@ create table if not exists adj_close as
 
 create table if not exists volume as
 (
-	select id, "Volume" as volume,
+	select id, volume,
 	"Date" as date
 	from a_datain
 )
